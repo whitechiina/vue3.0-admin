@@ -1,0 +1,14 @@
+// router4的路由配置
+import { createRouter, createWebHashHistory } from 'vue-router'
+
+// 在router新版本中，需要使用createRouter来创建路由
+export default createRouter({
+    // 指定路由的模式，此处使用的是hash模式
+    history: createWebHashHistory(),
+    routes: [
+        {
+            path: '/',
+            component: () => import('../layout/index.vue' )
+        }
+    ]
+})
